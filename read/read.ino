@@ -5,22 +5,22 @@ char msg = '  ';   // variable to hold data from serial
 void setup() {
   pinMode(ledPin, OUTPUT);      // declare LED as output
   Serial.begin(9600);
-  Serial.print("Program Initiated\n");
+  Serial.print("launch sequence success!\n");
 }
 
-void loop(){
-        // While data is sent over serial assign it to the msg
+void loop(){       
 	while (Serial.available()>0){
 		msg=Serial.read();
 	}
 
-  // Turn LED on/off if we recieve 'Y'/'N' over serial
-  if (msg=='Y') {
-    digitalWrite(ledPin, HIGH);  // turn LED ON
+  // use 'on' or 'off' to dictate status of light
+  if (msg.equals("ON") || msg.equals("on") {	// cant find an ignorecase
+    digitalWrite(ledPin, HIGH);
+    Serial.print("Houston, we are lit!");
     Serial.print("LED Activated\n");
     msg=' ';
-  } else if (msg=='N') {
-    digitalWrite(ledPin, LOW); // turn LED OFF
+  } else if (msg.equals("OFF") || msg.equals("off")) {
+    digitalWrite(ledPin, LOW); 
   }
 }
 
