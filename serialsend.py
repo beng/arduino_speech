@@ -11,15 +11,11 @@ This file:
 	-writes data to the micro-controller
 '''
 
-port = 'COM3'
-s = serial.Serial(port,9600)
+s = serial.Serial('COM3',9600)
 
 def input(sound):
-	print 'COMING LIVE FROM SERIALSEND WITH COMMAND', sound
-
-def write_test(x):
-	for i in range(x):
-		s.write('Y')
-		time.sleep(1)
-		s.write('N')
-		print s.readline()
+    print 'COMING LIVE FROM SERIALSEND WITH COMMAND', sound
+    s.write(sound)
+    print s.readline()
+    
+    
