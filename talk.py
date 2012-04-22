@@ -15,7 +15,8 @@ python and the micro-controller.
 '''
 class index():
     def GET(self):
-        return render.index('hey')
+        title = 'Index Here!'
+        return render.index()
     
     def POST(self):
         p = web.input()
