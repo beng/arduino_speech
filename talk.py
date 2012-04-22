@@ -7,13 +7,18 @@ urls = (
         )
 render = web.template.render('templates/', base='layout')
 
+'''
+used to display a simple form using HTML5 
+x-webkit-speech to. post data is then sent
+to serialsend.py which acts as a middleman between
+python and the micro-controller.
+'''
 class index():
     def GET(self):
         return render.index('hey')
     
     def POST(self):
         p = web.input()
-        print p.talk
         serialsend.input(p.talk)
         
 if __name__ == "__main__":
