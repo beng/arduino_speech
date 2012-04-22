@@ -9,7 +9,7 @@ render = web.template.render('templates/', base='layout')
 
 '''
 used to display a simple form using HTML5 
-x-webkit-speech to post data is then sent
+x-webkit-speech. post data is then sent
 to serialsend.py which acts as a middleman between
 python and the micro-controller.
 '''
