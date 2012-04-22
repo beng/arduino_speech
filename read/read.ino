@@ -1,6 +1,6 @@
-int ledPin = 9;  // choose the pin for the LED
-int val = 0;      // variable for reading the pin status
-char msg = '  ';   // variable to hold data from serial
+int ledPin = 9;
+int val = 0;
+char msg = '  ';
 
 void setup() {
   pinMode(ledPin, OUTPUT);      // declare LED as output
