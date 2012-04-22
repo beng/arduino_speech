@@ -1,5 +1,6 @@
 import web
 import random
+import serialsend
 
 urls = (
         '/', 'index',
@@ -13,6 +14,7 @@ class index():
     def POST(self):
         p = web.input()
         print p.talk
+        serialsend.input(p.talk)
         
 if __name__ == "__main__":
    app = web.application(urls, globals())
