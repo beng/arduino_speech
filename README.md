@@ -9,7 +9,7 @@
 
 -run sound.py
 
-    python sound.py
+    python talk.py
  
 -navigate web browser to
   
